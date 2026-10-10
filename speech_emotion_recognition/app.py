@@ -11,8 +11,10 @@ import matplotlib.pyplot as plt
 
 from audio_utils import extract_mfcc
 
-MODEL_PATH = Path("models/speech_emotion_cnn_lstm.keras")
-LABELS_PATH = Path("models/labels.json")
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "models" / "speech_emotion_cnn_lstm.keras"
+LABELS_PATH = BASE_DIR / "models" / "labels.json"
 
 st.set_page_config(page_title="Speech Emotion Recognition", page_icon="🎙️", layout="centered")
 st.title("🎙️ Speech Emotion Recognition")
